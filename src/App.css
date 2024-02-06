@@ -1,0 +1,110 @@
+#thumbnail:hover + #hovertext { transition: all 0.25s ease; opacity: 1; }
+
+#hovertext {
+    opacity: 0;
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+ 
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+    white-space: nowrap
+}
+
+.unhighlightable {
+  -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+ 
+    /*
+      Introduced in IE 10.
+      See http://ie.microsoft.com/testdrive/HTML5/msUserSelect/
+    */
+    -ms-user-select: none;
+    user-select: none;
+}
+
+#container {
+    display: grid; /* turn it into a grid*/
+    grid-template-columns: auto auto auto; /* make the columns in the grid split into a 1:2:3 ratio */
+}
+
+.container2 {
+  display: grid; /* turn it into a grid*/
+  grid-template-columns: auto; /* make the columns in the grid split into a 1:2:3 ratio */
+  grid-template-rows: auto;
+}
+
+.PopUp {
+  display: none;
+}
+
+.Clilckable {
+  cursor: "pointer",
+}
+
+.Hide {
+  position: absolute !important;
+  top: -9999px !important;
+  left: -9999px !important;
+}
+
+.Show {
+  
+}
+
+.ThumbnailContainer {
+  display: grid;
+  grid-template-columns: 70% 30%;
+  grid-template-rows: 30% 70%;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 2%;
+
+}
+
+
+.CenteredClass {
+  justify-items: center;
+  align-items: center;
+}
+
+.ThumbnailGridArea {
+  grid-area: 1 / 1 / span 2 / span 1;
+  display: inline-block;
+}
+
+.textstart {
+  align-self: start;
+}
+
+.textend {
+  background-color: rgb(202, 27, 27);
+  text-align: justify;
+  align-self: end;
+  
+}
+
+.nomargin {
+  margin: 0;
+}
+
+
+
+
+.objectfitcover {
+
+
+  
+}
+
+video {
+
+
+
+}
