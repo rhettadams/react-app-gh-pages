@@ -1,16 +1,33 @@
-import React from "react";
+import React, { Children, ReactNode } from "react";
 import "../App.css";
 import videothing from "../videos/noodleportfoliopiece.mp4";
 import MediaComponent from "./MediaComponent";
+import VideoPlayerThing from "./VideoPlayerThing";
+
+import { render } from "react-dom";
+
+import VideoPlayer from "./video";
+
+import "../app.css";
 
 //var videothing = "../videos/noodleportfoliopiece.mp4";
 
 interface Props {
   display: boolean;
   closePopup: () => void;
+  children: ReactNode;
 }
 
-const PopUp = ({ display, closePopup }: Props) => {
+const videoJsOptions = {
+  sources: [
+    {
+      src: "//vjs.zencdn.net/v/oceans.mp4",
+      type: "video/mp4",
+    },
+  ],
+};
+
+const PopUp = ({ display, closePopup, children }: Props) => {
   return (
     <div
       style={{
@@ -72,18 +89,7 @@ const PopUp = ({ display, closePopup }: Props) => {
                 transform: "translate(5%, 5%)",
                 pointerEvents: "auto",
               }}
-            >
-              <video
-                style={{
-                  position: "fixed",
-                  width: "10%",
-                  zIndex: 6,
-                  marginTop: "10%",
-                }}
-              >
-                <source src={videothing} type="video/mp4" />
-              </video>
-            </rect>
+            ></rect>
             <foreignObject
               x="5%"
               y="5%"
@@ -99,42 +105,28 @@ const PopUp = ({ display, closePopup }: Props) => {
                   transform: "translate(5%, 5%)",
                 }}
               >
-                <div className="ThumbnailGridArea ">
-                  <video
-                    controls={true}
-                    style={{
-                      pointerEvents: "auto",
-                      width: "312.5%",
-                      height: "312.5%",
-                      transform: "scale(0.32)",
-                      transformOrigin: "left",
-                    }}
-                    className="CenteredClass"
-                  >
-                    <source src={videothing} type="video/mp4" />
-                  </video>
+                <div
+                  style={{
+                    width: "100%",
+                    height: "100%",
+                    pointerEvents: "auto",
+                  }}
+                  className="ThumbnailGridArea "
+                >
+                  <div className="centerVertically roundedCorner">
+                    <VideoPlayer options={videoJsOptions} />
+                  </div>
                 </div>
-
-                <div className="textend">
+                <div className="textend ">
                   <h3
-                    className="nomargin"
+                    className="nomargin outlinedgradientbackg"
                     style={{ fontSize: "5px", alignSelf: "end" }}
                   >
                     It all starts with an idea
                   </h3>
                 </div>
                 <div className="textstart" style={{ fontSize: "2.5px" }}>
-                  <p>
-                    Animator and influencer Julian Morley creates animated
-                    content for Youtube and Patreon platforms. He posts
-                    cardboard-puppet videos in between his animated features to
-                    keep his audience entertained during the long production
-                    time of animation. I chose to try to animate one of his
-                    cardboard-puppet videos in Blender. I animated a 2D
-                    character in a 3D environment. This was a 2 week long
-                    project I did over the summer and I am very proud of the
-                    result.
-                  </p>
+                  <p>{children}</p>
                 </div>
               </div>
             </foreignObject>

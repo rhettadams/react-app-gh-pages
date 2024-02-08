@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { ReactNode, useState } from "react";
 import "../App.css";
 import PopUp from "./PopUp";
 //import PopUp from "./PopUp";
@@ -6,6 +6,7 @@ import PopUp from "./PopUp";
 interface Props {
   YTransform: number;
   SrcImage: string;
+  children: ReactNode;
 }
 
 var visibility = false;
@@ -23,7 +24,7 @@ function ToggleDisplay() {
   }
 }
 
-const Thumbnail = ({ YTransform, SrcImage }: Props) => {
+const Thumbnail = ({ YTransform, SrcImage, children }: Props) => {
   const [visible, setVisible] = useState(false); // initiate it at false
   function OnClickThing() {
     setVisible(true);
@@ -31,7 +32,9 @@ const Thumbnail = ({ YTransform, SrcImage }: Props) => {
   }
   return (
     <div>
-      <PopUp display={visible} closePopup={() => setVisible(false)} />
+      <PopUp display={visible} closePopup={() => setVisible(false)}>
+        {children}
+      </PopUp>
       <div
         style={{
           position: "relative",
