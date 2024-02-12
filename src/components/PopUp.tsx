@@ -3,6 +3,7 @@ import "../App.css";
 import videothing from "../videos/noodleportfoliopiece.mp4";
 import MediaComponent from "./MediaComponent";
 import VideoPlayerThing from "./VideoPlayerThing";
+import ImageVideoSwitch from "./ImageVideoSwitch";
 
 import { render } from "react-dom";
 
@@ -16,6 +17,8 @@ interface Props {
   display: boolean;
   closePopup: () => void;
   children: ReactNode;
+  media: any;
+  title: string;
 }
 
 const videoJsOptions = {
@@ -27,7 +30,7 @@ const videoJsOptions = {
   ],
 };
 
-const PopUp = ({ display, closePopup, children }: Props) => {
+const PopUp = ({ display, closePopup, children, media, title }: Props) => {
   return (
     <div
       style={{
@@ -76,14 +79,20 @@ const PopUp = ({ display, closePopup, children }: Props) => {
             viewBox="0 0 177 100"
             style={{ position: "fixed", pointerEvents: "none" }}
           >
+            <defs>
+              <linearGradient id="Gradient1">
+                <stop className="popgradstop1" offset="0%" />
+                <stop className="popgradstop2" offset="100%" />
+              </linearGradient>
+            </defs>
             <rect
               x="0"
               y="0"
               width="90%"
               height="90%"
               rx="5"
+              className="popupOutline"
               style={{
-                fill: "#58bdd3",
                 opacity: 1,
 
                 transform: "translate(5%, 5%)",
@@ -114,19 +123,28 @@ const PopUp = ({ display, closePopup, children }: Props) => {
                   className="ThumbnailGridArea "
                 >
                   <div className="centerVertically roundedCorner">
-                    <VideoPlayer options={videoJsOptions} />
+                    <ImageVideoSwitch media={media} />
                   </div>
                 </div>
                 <div className="textend ">
                   <h3
-                    className="nomargin outlinedgradientbackg"
-                    style={{ fontSize: "5px", alignSelf: "end" }}
+                    className="nomargin outlinedgradientbackgoutline "
+                    style={{
+                      display: "grid",
+
+                      fontSize: "5px",
+                      alignSelf: "end",
+                      zIndex: 7,
+                    }}
                   >
-                    It all starts with an idea
+                    {title}
                   </h3>
                 </div>
-                <div className="textstart" style={{ fontSize: "2.5px" }}>
-                  <p>{children}</p>
+                <div
+                  className="textstart outlinedgradientbackg nobottommargin"
+                  style={{ fontSize: "2.5px" }}
+                >
+                  <p className="nobottommargin">{children}</p>
                 </div>
               </div>
             </foreignObject>

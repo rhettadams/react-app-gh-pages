@@ -3,10 +3,15 @@ import "../App.css";
 import PopUp from "./PopUp";
 //import PopUp from "./PopUp";
 
+import noodleimage1 from "../images/noodleimage1.png";
+
 interface Props {
-  YTransform: number;
   SrcImage: string;
   children: ReactNode;
+  media: any;
+  hovertext: string;
+  hovertextfntsize: number;
+  title: string;
 }
 
 var visibility = false;
@@ -24,7 +29,14 @@ function ToggleDisplay() {
   }
 }
 
-const Thumbnail = ({ YTransform, SrcImage, children }: Props) => {
+const Thumbnail = ({
+  SrcImage,
+  children,
+  media,
+  hovertext,
+  hovertextfntsize,
+  title,
+}: Props) => {
   const [visible, setVisible] = useState(false); // initiate it at false
   function OnClickThing() {
     setVisible(true);
@@ -32,7 +44,12 @@ const Thumbnail = ({ YTransform, SrcImage, children }: Props) => {
   }
   return (
     <div>
-      <PopUp display={visible} closePopup={() => setVisible(false)}>
+      <PopUp
+        display={visible}
+        closePopup={() => setVisible(false)}
+        media={media}
+        title={title}
+      >
         {children}
       </PopUp>
       <div
@@ -49,7 +66,7 @@ const Thumbnail = ({ YTransform, SrcImage, children }: Props) => {
       >
         <img
           src={SrcImage}
-          className="img-responsive unhighlightable"
+          className="img-responsive unhighlightable thumbnailOutline"
           id="thumbnail"
           alt="Cinque Terre"
           onClick={() => OnClickThing()}
@@ -69,9 +86,10 @@ const Thumbnail = ({ YTransform, SrcImage, children }: Props) => {
             left: "50%",
             top: "50%",
             transform: "translate(-50%, -50%)",
+            fontSize: hovertextfntsize,
           }}
         >
-          HI THERE
+          {hovertext}
         </h1>
       </div>
     </div>

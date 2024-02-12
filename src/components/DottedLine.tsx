@@ -9,7 +9,7 @@ const DottedLine = ({ linelength }: Props) => {
       height={linelength}
       style={{
         position: "absolute",
-        top: "10%",
+        top: "20%",
         //transform: "translate(-50%, 0%)",
         zIndex: 1,
         pointerEvents: "none",
@@ -21,14 +21,24 @@ const DottedLine = ({ linelength }: Props) => {
         x2="50%"
         y2={linelength}
         style={{
-          stroke: "rgb(255,0,0)",
-
           strokeWidth: 2,
 
           strokeDasharray: "5 5",
           pointerEvents: "none",
         }}
+        className="verticalLineColor"
       />
+      <foreignObject>
+        <div
+          style={{
+            position: "absolute",
+            transform: "translate(15%, 0%)",
+            zIndex: 8,
+          }}
+        >
+          <h3>1234</h3>
+        </div>
+      </foreignObject>
     </svg>
   );
 };

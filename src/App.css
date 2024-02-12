@@ -32,6 +32,9 @@
 #container {
     display: grid; /* turn it into a grid*/
     grid-template-columns: auto auto auto; /* make the columns in the grid split into a 1:2:3 ratio */
+    margin-left: 10%;
+    margin-right: 10%;
+    grid-gap: 2%;
 }
 
 .container2 {
@@ -85,31 +88,32 @@
 
 .textend {
 
-  text-align: justify;
+  
   align-self: end;
   
 }
 
 :root {color-scheme: light dark;}
 
-.outlinedgradientbackg {
+.outlinedgradientbackgoutline {
   border-radius: 2px;
 
 }
 
 @media (prefers-color-scheme: dark) {
-  .outlinedgradientbackg {
-    background-color: #753;
-    color: #dcb;
-    outline: 1px solid #000;
+  .outlinedgradientbackgoutline {
+    background-image: linear-gradient(to bottom right, rgb(51, 51, 51), rgb(107, 107, 107));
+    outline: 1px solid #313131;
+    padding: 1px;
+    color: #ffffff;
     
   }
 }
 
 @media (prefers-color-scheme: light) {
-  .outlinedgradientbackg {
-    background-image: linear-gradient(to bottom right, rgb(51, 51, 51), rgb(107, 107, 107));
-    outline: 1px solid #313131;
+  .outlinedgradientbackgoutline {
+    background-image: linear-gradient(to bottom right, rgb(243, 243, 243), rgb(180, 180, 180));
+    outline: 1px solid #e7e7e7;
     padding: 1px;
     color: #ffffff;
   }
@@ -156,4 +160,174 @@
 .roundedCorner {
   border-radius: 2px;
   overflow: hidden; 
+}
+
+.thumbnailOutline {
+
+    z-index: -1;
+    margin: border; /* !importanté */
+    border-radius: inherit; /* !importanté */
+    
+    padding: 12px;
+}
+
+@media (prefers-color-scheme: dark) {
+.thumbnailOutline {
+  background: linear-gradient(to bottom right, rgb(51, 51, 51), rgb(107, 107, 107));
+}
+}
+
+@media (prefers-color-scheme: light) {
+  .thumbnailOutline {
+  background: linear-gradient(to bottom right, rgb(243, 243, 243), rgb(180, 180, 180));
+}}
+
+@media (prefers-color-scheme: dark) {
+  .verticalLineColor{
+    stroke:rgb(51, 51, 51);
+  }}
+
+@media (prefers-color-scheme: light) {
+.verticalLineColor{
+  stroke:rgb(180, 180, 180);
+}}
+
+@media (prefers-color-scheme: dark) {
+  .backgroundGradient{
+    background: linear-gradient(to bottom right, rgb(51, 51, 51), rgb(107, 107, 107));
+    background-size: 100%;
+
+    
+  }
+  }
+
+@media (prefers-color-scheme: light) {
+  .backgroundGradient{
+    background: linear-gradient(to bottom right, rgb(243, 243, 243), rgb(180, 180, 180));
+
+  }
+  }
+
+
+    
+.popupOutline{
+  fill: url(#Gradient1);
+}
+
+@media (prefers-color-scheme: dark) {
+  .popupOutline {
+    outline: 1px solid #313131;
+    border-radius: 5px;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .popupOutline {
+    outline: 1px solid #e7e7e7;
+    border-radius: 5px;
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .popgradstop1 {
+    stop-color: rgb(51, 51, 51);
+  }
+  .popgradstop2 {
+    stop-color: rgb(107, 107, 107);
+  
+  }
+}
+@media (prefers-color-scheme: light) {
+  .popgradstop1 {
+    stop-color: rgb(243, 243, 243);
+  }
+  .popgradstop2 {
+    stop-color: rgb(180, 180, 180);
+  
+  }
+}
+
+.outlinedgradientbackg {
+  border-radius: 2px;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  .outlinedgradientbackg {
+    background-image: linear-gradient(to bottom right, rgb(51, 51, 51), rgb(107, 107, 107));
+    padding: 1px;
+    color: #ffffff;
+
+    
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .outlinedgradientbackg {
+    background-image: linear-gradient(to bottom right, rgb(243, 243, 243), rgb(180, 180, 180));
+    padding: 1px;
+    color: #000000;
+  }
+}
+
+.nobottommargin {
+  margin: 0;
+  margin-bottom: 0px;
+}
+
+.topbar {
+  border-radius: 6px;
+
+}
+
+@media (prefers-color-scheme: dark) {
+  .topbar {
+    background-image: linear-gradient(to bottom right, rgb(51, 51, 51), rgb(107, 107, 107));
+    outline: 5px solid #313131;
+    padding: 5px;
+    color: #ffffff;
+    
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .topbar {
+    background-image: linear-gradient(to bottom right, rgb(243, 243, 243), rgb(180, 180, 180));
+    outline: 5px solid #e7e7e7;
+    padding: 5px;
+    color: #ffffff;
+  }
+}
+
+
+
+@media (prefers-color-scheme: dark) {
+  .filterinvert {
+    filter: invert(1);
+    
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .filterinvert {
+    filter: invert(0);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .buttonstyle {
+    background-image: linear-gradient(to bottom right, rgb(51, 51, 51), rgb(107, 107, 107));
+    outline: 1px solid #313131;
+    padding: 1px;
+    color: #ffffff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .buttonstyle {
+    background-image: linear-gradient(to bottom right, rgb(243, 243, 243), rgb(180, 180, 180));
+    outline: 1px solid #e7e7e7;
+    padding: 1px;
+    color: #ffffff;
+  }
 }
