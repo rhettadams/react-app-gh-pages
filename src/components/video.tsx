@@ -1,8 +1,6 @@
 import * as React from "react";
 import videojs from "video.js";
 
-const player = videojs("video", {});
-
 // Styles
 import "video.js/dist/video-js.css";
 
@@ -21,16 +19,19 @@ const initialOptions: videojs.PlayerOptions = {
 };
 
 const VideoPlayer: React.FC<IVideoPlayerProps> = ({ options }) => {
-  const videoNode = React.useRef<HTMLVideoElement>();
-  const player = React.useRef<videojs.Player>();
+  const videoNode = React.createRef<HTMLVideoElement>();
+  const player = React.createRef<videojs.Player>();
 
   React.useEffect(() => {
-    player.current = videojs(videoNode.current, {
-      ...initialOptions,
-      ...options,
-    }).ready(function () {
-      // console.log('onPlayerReady', this);
-    });
+    if (videoNode.current) {
+      // @ts-ignore
+      player.current = videojs(videoNode.current, {
+        ...initialOptions,
+        ...options,
+      }).ready(function () {
+        // console.log('onPlayerReady', this);
+      });
+    }
     return () => {
       if (player.current) {
         player.current.dispose();
