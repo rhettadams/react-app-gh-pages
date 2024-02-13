@@ -2,7 +2,7 @@ import React, { Children, ReactNode } from "react";
 import "../App.css";
 import videothing from "../videos/noodleportfoliopiece.mp4";
 import MediaComponent from "./MediaComponent";
-import VideoPlayerThing from "./VideoPlayerThing";
+
 import ImageVideoSwitch from "./ImageVideoSwitch";
 
 import { render } from "react-dom";

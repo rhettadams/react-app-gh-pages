@@ -1,6 +1,8 @@
 import * as React from "react";
 import videojs from "video.js";
 
+const player = videojs("video", {});
+
 // Styles
 import "video.js/dist/video-js.css";
 
