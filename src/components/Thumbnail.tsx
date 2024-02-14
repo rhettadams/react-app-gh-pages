@@ -10,7 +10,7 @@ interface Props {
   children: ReactNode;
   media: any;
   hovertext: string;
-  hovertextfntsize: number;
+
   title: string;
 }
 
@@ -34,7 +34,7 @@ const Thumbnail = ({
   children,
   media,
   hovertext,
-  hovertextfntsize,
+
   title,
 }: Props) => {
   const [visible, setVisible] = useState(false); // initiate it at false
@@ -86,8 +86,12 @@ const Thumbnail = ({
             left: "50%",
             top: "50%",
             transform: "translate(-50%, -50%)",
-            fontSize: hovertextfntsize,
+            fontSize: 30,
+            width: "100%",
+            whiteSpace: "normal",
+            textAlign: "center",
           }}
+          className="darkmodelightmodetext"
         >
           {hovertext}
         </h1>

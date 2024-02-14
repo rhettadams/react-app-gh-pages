@@ -1,11 +1,12 @@
 interface Props {
   linelength: string;
+  collumname: string;
 }
 
-const DottedLine = ({ linelength }: Props) => {
+const DottedLine = ({ linelength, collumname }: Props) => {
   return (
     <svg
-      width="100"
+      width="300"
       height={linelength}
       style={{
         position: "absolute",
@@ -15,9 +16,17 @@ const DottedLine = ({ linelength }: Props) => {
         pointerEvents: "none",
       }}
     >
+      <foreignObject
+        y="-10"
+        width="100%"
+        height="100%"
+        style={{ textAlign: "center" }}
+      >
+        <h1 className="darkmodelightmodetext">{collumname}</h1>
+      </foreignObject>
       <line
         x1="50%"
-        y1="0"
+        y1="40"
         x2="50%"
         y2={linelength}
         style={{
@@ -28,17 +37,19 @@ const DottedLine = ({ linelength }: Props) => {
         }}
         className="verticalLineColor"
       />
-      <foreignObject>
-        <div
-          style={{
-            position: "absolute",
-            transform: "translate(15%, 0%)",
-            zIndex: 8,
-          }}
-        >
-          <h3>1234</h3>
-        </div>
-      </foreignObject>
+      <line
+        x1="20%"
+        y1="40"
+        x2="80%"
+        y2="40"
+        style={{
+          strokeWidth: 2,
+
+          strokeDasharray: "5 5",
+          pointerEvents: "none",
+        }}
+        className="verticalLineColor"
+      />
     </svg>
   );
 };

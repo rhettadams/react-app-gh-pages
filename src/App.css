@@ -331,3 +331,21 @@
     color: #ffffff;
   }
 }
+
+.darkmodelightmodetext {
+
+}
+
+@media (prefers-color-scheme: dark) {
+  .darkmodelightmodetext{
+    color: #ffffff;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .darkmodelightmodetext{
+    
+    color: #313131;
+  }
+
+}

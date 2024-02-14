@@ -2,13 +2,15 @@
 
 import DottedLine from "./components/DottedLine";
 import Thumbnail from "./components/Thumbnail";
-import noodleimage from "./images/noodleimage1.png";
-import wanshowpng from "./images/wanshowpng.png";
-import alignmentimage from "./images/alignmentimage.png";
 import PopUp from "./components/PopUp";
 import DottedHoriLine from "./components/DottedHoriLine";
-import noodlemedia from "./videos/noodleportfoliopiece.mp4";
 import RJALogo from "./images/rja icon.svg";
+
+import noodleimage from "./images/noodleimage1.png";
+import noodlemedia from "./videos/noodleportfoliopiece.mp4";
+import wanshowpng from "./images/wanshowpng.png";
+import wanmedia from "./videos/wan portfolio piece.mp4";
+import alignmentimage from "./images/alignmentimage.png";
 
 const LeftColl = "20%";
 const MidColl = "50%";
@@ -55,7 +57,12 @@ function App() {
           type="button"
           onClick={opencontact}
         >
-          <h3 style={{ fontSize: "20px" }}>CONTACT</h3>
+          <h3
+            className="darkmodelightmodetext"
+            style={{ fontSize: "1.6vw", display: "inline-block" }}
+          >
+            CONTACT
+          </h3>
         </button>
       </div>
 
@@ -71,8 +78,7 @@ function App() {
             <Thumbnail
               SrcImage={noodleimage}
               media={noodlemedia}
-              hovertext="hello"
-              hovertextfntsize={40}
+              hovertext="2D Animation in a 3D World"
               title="Animating a short-film that couldn't be Aniamted"
             >
               Animator and influencer Julian Morley creates animated content for
@@ -83,7 +89,7 @@ function App() {
               a 2D character in a 3D environment. This was a 2 week long project
               I did over the summer and I am very proud of the result.
             </Thumbnail>
-            <DottedLine linelength={linelength} />
+            <DottedLine linelength={linelength} collumname="3D Animation" />
           </div>
         </div>
         <div>
@@ -96,16 +102,17 @@ function App() {
           >
             <Thumbnail
               SrcImage={wanshowpng}
-              media={noodlemedia}
+              media={wanmedia}
               hovertext="hello"
-              hovertextfntsize={40}
-              title="Animating a short-film that couldn't be Aniamted"
+              title="3D pixel art with 3D lighting and rigging."
             >
-              Animator and influencer Julian Morley creates animated content for
-              Youtube and Patreon platforms. He posts cardboard-puppet videos in
-              between his animated features to keep his audience entertained
-              during the long production time of animation. title="Animating a
-              short-film that couldn't be Aniamted"
+              (DISCLAIMER: I did not make the clip at the end of characters
+              carrying a couch nor do I claim any ownership of any intellectual
+              property or affiliation with LMG.) The WAN Show is an online talk
+              showand podcast. On the show a host mentioned the need for a new
+              intro. I decided to attempt to recreate their old intro in blender
+              with dynamic lighting and 3D rigging. All characters in my version
+              are 3d characters animated and lit in 3D.
             </Thumbnail>
             <DottedLine linelength={linelength} />
           </div>
@@ -122,11 +129,9 @@ function App() {
               SrcImage={alignmentimage}
               media="./images/noodleimage1.png"
               hovertext="2D Animation in a 3D Space"
-              hovertextfntsize={23}
-              title="Animating a short-film that couldn't be Aniamted"
+              title="children of the earth"
             >
-              children of the earth title="Animating a short-film that couldn't
-              be Aniamted"
+              children of the earth
             </Thumbnail>
             <DottedLine linelength={linelength} />
           </div>
