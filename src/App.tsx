@@ -114,7 +114,7 @@ function App() {
               with dynamic lighting and 3D rigging. All characters in my version
               are 3d characters animated and lit in 3D.
             </Thumbnail>
-            <DottedLine linelength={linelength} />
+            <DottedLine collumname="Video Editing" linelength={linelength} />
           </div>
         </div>
         <div>
@@ -133,7 +133,7 @@ function App() {
             >
               children of the earth
             </Thumbnail>
-            <DottedLine linelength={linelength} />
+            <DottedLine collumname="IT" linelength={linelength} />
           </div>
         </div>
       </div>
