@@ -14,6 +14,7 @@ const DottedLine = ({ linelength, collumname }: Props) => {
         //transform: "translate(-50%, 0%)",
         zIndex: 1,
         pointerEvents: "none",
+        justifySelf: "center",
       }}
     >
       <foreignObject

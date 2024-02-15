@@ -12,6 +12,7 @@ interface Props {
   hovertext: string;
 
   title: string;
+  marginTopval: string;
 }
 
 var visibility = false;
@@ -34,6 +35,7 @@ const Thumbnail = ({
   children,
   media,
   hovertext,
+  marginTopval,
 
   title,
 }: Props) => {
@@ -43,7 +45,7 @@ const Thumbnail = ({
     console.log("visible state is:" + visible);
   }
   return (
-    <div>
+    <div style={{ marginTop: marginTopval }}>
       <PopUp
         display={visible}
         closePopup={() => setVisible(false)}

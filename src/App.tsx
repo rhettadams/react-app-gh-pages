@@ -70,33 +70,8 @@ function App() {
         <div>
           <div
             style={{
-              marginTop: margtopoffset + 300 + "px",
-              display: "flex",
-              justifyContent: "center",
-            }}
-          >
-            <Thumbnail
-              SrcImage={noodleimage}
-              media={noodlemedia}
-              hovertext="2D Animation in a 3D World"
-              title="Animating a short-film that couldn't be Aniamted"
-            >
-              Animator and influencer Julian Morley creates animated content for
-              Youtube and Patreon platforms. He posts cardboard-puppet videos in
-              between his animated features to keep his audience entertained
-              during the long production time of animation. I chose to try to
-              animate one of his cardboard-puppet videos in Blender. I animated
-              a 2D character in a 3D environment. This was a 2 week long project
-              I did over the summer and I am very proud of the result.
-            </Thumbnail>
-            <DottedLine linelength={linelength} collumname="3D Animation" />
-          </div>
-        </div>
-        <div>
-          <div
-            style={{
-              marginTop: "600px",
-              display: "flex",
+              //marginTop: margtopoffset + 300 + "px",
+              display: "inline-grid",
               justifyContent: "center",
             }}
           >
@@ -105,6 +80,7 @@ function App() {
               media={wanmedia}
               hovertext="hello"
               title="3D pixel art with 3D lighting and rigging."
+              marginTopval="250px"
             >
               (DISCLAIMER: I did not make the clip at the end of characters
               carrying a couch nor do I claim any ownership of any intellectual
@@ -114,13 +90,29 @@ function App() {
               with dynamic lighting and 3D rigging. All characters in my version
               are 3d characters animated and lit in 3D.
             </Thumbnail>
-            <DottedLine collumname="Video Editing" linelength={linelength} />
+            <Thumbnail
+              SrcImage={noodleimage}
+              media={noodlemedia}
+              hovertext="2D Animation in a 3D World"
+              title="Animating a short-film that couldn't be Aniamted"
+              marginTopval="300px"
+            >
+              Animator and influencer Julian Morley creates animated content for
+              Youtube and Patreon platforms. He posts cardboard-puppet videos in
+              between his animated features to keep his audience entertained
+              during the long production time of animation. I chose to try to
+              animate one of his cardboard-puppet videos in Blender. I animated
+              a 2D character in a 3D environment. This was a 2 week long project
+              I did over the summer and I am very proud of the result.
+            </Thumbnail>
+
+            <DottedLine linelength={linelength} collumname="3D Animation" />
           </div>
         </div>
         <div>
           <div
             style={{
-              marginTop: "1000px",
+              //marginTop: "600px",
               display: "flex",
               justifyContent: "center",
             }}
@@ -130,6 +122,27 @@ function App() {
               media="./images/noodleimage1.png"
               hovertext="2D Animation in a 3D Space"
               title="children of the earth"
+              marginTopval="1000px"
+            >
+              children of the earth
+            </Thumbnail>
+            <DottedLine collumname="Video Editing" linelength={linelength} />
+          </div>
+        </div>
+        <div>
+          <div
+            style={{
+              //marginTop: "1000px",
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <Thumbnail
+              SrcImage={alignmentimage}
+              media="./images/noodleimage1.png"
+              hovertext="2D Animation in a 3D Space"
+              title="children of the earth"
+              marginTopval="1000px"
             >
               children of the earth
             </Thumbnail>
