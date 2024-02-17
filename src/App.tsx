@@ -205,7 +205,7 @@ function App() {
               media={wanmedia}
               hovertext="hello"
               title="3D pixel art with 3D lighting and rigging."
-              marginTopval="130%"
+              marginTopval="100%"
             >
               (DISCLAIMER: I did not make the clip at the end of characters
               carrying a couch nor do I claim any ownership of any intellectual
@@ -323,7 +323,7 @@ function App() {
               media={introvideo}
               hovertext="My first motion graphic"
               title="My first motion graphic"
-              marginTopval="250%"
+              marginTopval="220%"
             >
               In 2021 I took my first delve into motion graphics. I chose to
               make an intro for a former youtube channel. I carefully selected

@@ -12,7 +12,7 @@ const DottedLine = ({ linelength, collumname }: Props) => {
       height={linelength}
       style={{
         position: "absolute",
-        marginTop: "20vw",
+        marginTop: "10%",
         //transform: "translate(-50%, 0%)",
         zIndex: 1,
         pointerEvents: "none",
