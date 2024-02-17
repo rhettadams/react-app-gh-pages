@@ -379,3 +379,13 @@
   vertical-align: middle;
 }
 
+.topbargrid {
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+  overflow: hidden;
+  grid-template-rows: 100%;
+  justify-items: center;
+
+}
+
+

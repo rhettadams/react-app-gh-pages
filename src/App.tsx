@@ -23,6 +23,12 @@ import introvideo from "./videos/intro.mp4";
 import introimage from "./images/intro v2-00;00;06;04.png";
 import sqlite from "./images/SQLite_Logo.png";
 import sambaimage from "./images/samba.png";
+import aftereffects from "./icons/Adobe_Certified_Professional_Adobe_After_Effects_digital_badge-removebg-preview.png";
+import videoprofessional from "./icons/Adobe_Certified_Professional_Video_Design_digital_badge-removebg-preview.png";
+import illustrator from "./icons/Adobe_Certified_Professional_Adobe_Illustrator_digital_badge-removebg-preview.png";
+import Indesign from "./icons/Adobe_Certified_Professional_Adobe_InDesign_digital_badge-removebg-preview.png";
+import prempro from "./icons/Adobe_Certified_Professional_Adobe_Premiere_Pro_digital_badge-removebg-preview.png";
+import animate from "./icons/Adobe_Certified_Professional_Adobe_Animate_digital_badge-removebg-preview.png";
 
 const LeftColl = "20%";
 const MidColl = "50%";
@@ -37,11 +43,15 @@ function opencontact() {
   open("https://linktr.ee/rhettadams");
 }
 
+function openlink(link: string) {
+  open(link);
+}
+
 function App() {
   return (
     <div className="backgroundGradient">
       <div
-        className="topbar"
+        className="topbar topbargrid"
         style={{
           width: "99%",
           height: "10%",
@@ -50,32 +60,135 @@ function App() {
           zIndex: 3,
         }}
       >
-        <img
-          style={{ height: "100%", top: "0", left: "0" }}
-          src={RJALogo}
-          alt="RJA Logo"
-          className="filterinvert"
-        />
-        <button
+        <div>
+          <img
+            style={{
+              width: "100%",
+              height: "100%",
+              top: "0",
+              left: "0",
+              objectFit: "cover",
+            }}
+            src={RJALogo}
+            alt="RJA Logo"
+            className="filterinvert"
+          />
+        </div>
+        <div
           style={{
-            width: "8%",
-            height: "70%",
-            top: "15%",
-            right: "1%",
-            borderRadius: "10px",
-            position: "fixed",
+            display: "flex",
+            alignContent: "center",
+            alignItems: "center",
           }}
-          className="buttonstyle "
-          type="button"
-          onClick={opencontact}
         >
-          <h3
-            className="darkmodelightmodetext"
-            style={{ fontSize: "1.6vw", display: "inline-block" }}
+          <img
+            style={{
+              height: "80%",
+              padding: "1%",
+              cursor: "pointer",
+              zIndex: 6,
+              alignSelf: "center",
+            }}
+            src={videoprofessional}
+            onClick={() =>
+              openlink(
+                "https://www.credly.com/badges/7e12dd15-d024-4651-8046-ad23f3770e2f/linked_in_profile"
+              )
+            }
+          ></img>
+          <img
+            style={{
+              height: "80%",
+              padding: "1%",
+              cursor: "pointer",
+              zIndex: 6,
+            }}
+            src={aftereffects}
+            onClick={() =>
+              openlink(
+                "https://www.credly.com/badges/2e67363d-e99b-45fe-beb8-f02305005eba/linked_in_profile"
+              )
+            }
+          ></img>
+          <img
+            style={{
+              height: "80%",
+              padding: "1%",
+              cursor: "pointer",
+              zIndex: 6,
+            }}
+            src={illustrator}
+            onClick={() =>
+              openlink(
+                "https://www.credly.com/badges/4c19b377-9a05-468b-bb7b-09507522a9b4/linked_in_profile"
+              )
+            }
+          ></img>
+          <img
+            style={{
+              height: "80%",
+              padding: "1%",
+              cursor: "pointer",
+              zIndex: 6,
+            }}
+            src={Indesign}
+            onClick={() =>
+              openlink(
+                "https://www.credly.com/badges/b7cac60b-838f-4c45-bd46-bac2974fee22/linked_in_profile"
+              )
+            }
+          ></img>
+          <img
+            style={{
+              height: "80%",
+              padding: "1%",
+              cursor: "pointer",
+              zIndex: 6,
+            }}
+            src={prempro}
+            onClick={() =>
+              openlink(
+                "https://www.credly.com/badges/3b34d04d-94b8-4c4d-a5ac-65419393663b/linked_in_profile"
+              )
+            }
+          ></img>
+          <img
+            style={{
+              height: "80%",
+              padding: "1%",
+              cursor: "pointer",
+              zIndex: 6,
+            }}
+            src={animate}
+            onClick={() =>
+              openlink(
+                "https://www.credly.com/badges/f0e029e5-926b-4012-be7b-a5d0d25cc2e7/linked_in_profile"
+              )
+            }
+          ></img>
+        </div>
+        <div>
+          <button
+            style={{
+              width: "8%",
+              height: "70%",
+              top: "15%",
+              right: "1%",
+              borderRadius: "10px",
+              position: "fixed",
+            }}
+            className="buttonstyle "
+            type="button"
+            onClick={opencontact}
           >
-            CONTACT
-          </h3>
-        </button>
+            <h3
+              className="darkmodelightmodetext"
+              style={{ fontSize: "1.6vw", display: "inline-block" }}
+            >
+              CONTACT
+            </h3>
+          </button>
+        </div>
       </div>
 
       <div id="container">
@@ -92,7 +205,7 @@ function App() {
               media={wanmedia}
               hovertext="hello"
               title="3D pixel art with 3D lighting and rigging."
-              marginTopval="250px"
+              marginTopval="130%"
             >
               (DISCLAIMER: I did not make the clip at the end of characters
               carrying a couch nor do I claim any ownership of any intellectual
@@ -107,7 +220,7 @@ function App() {
               media={noodlemedia}
               hovertext="2D Animation in a 3D World"
               title="Animating a short-film that couldn't be Aniamted"
-              marginTopval="50px"
+              marginTopval="60%"
             >
               Animator and influencer Julian Morley creates animated content for
               Youtube and Patreon platforms. He posts cardboard-puppet videos in
@@ -137,7 +250,7 @@ function App() {
               media={subhajimage}
               hovertext="Modelling in 3D with Constraints and Goals"
               title="Modelling in 3D with Constraints and Goals"
-              marginTopval="250px"
+              marginTopval="10vw"
             >
               I was tasked with creating a custom vehicle in a 3D modelling
               course. I chose to create a submirsible based off of a shark that
@@ -152,7 +265,7 @@ function App() {
               media={forensicsci}
               hovertext="Recreating a Crime Scene with Digital Tools"
               title="Recreating a Crime Scene with Digital Tools"
-              marginTopval="250px"
+              marginTopval="10vw"
             >
               I was tasked with recreating a crime scene with whatever tools I
               chose. Of course, I chose the tool I could create the best output
@@ -165,7 +278,7 @@ function App() {
               produce at an academic and professional level.
             </Thumbnail>
 
-            <DottedLine linelength="1100" collumname="3D Animation" />
+            <DottedLine linelength="90vw" collumname="3D Animation" />
           </div>
         </div>
         <div>
@@ -181,7 +294,7 @@ function App() {
               media={bedadhesion}
               hovertext="15,000 Views in a 3-week period"
               title="15,000 Views in a 3-week period"
-              marginTopval="400px"
+              marginTopval="190%"
             >
               I worked hard to specifically optimize my videos to achieve great
               success in the algorithm. I optimized my content based on popular
@@ -196,7 +309,7 @@ function App() {
               media={stringingvideo}
               hovertext="68,000 views on a Youtube Short"
               title="68,000 views on a Youtube Short"
-              marginTopval="250px"
+              marginTopval="135%"
             >
               When I started my youtube channel I hoped to gain some experience
               in social media marketing. On only my 3rd video I achieved rapid
@@ -210,7 +323,7 @@ function App() {
               media={introvideo}
               hovertext="My first motion graphic"
               title="My first motion graphic"
-              marginTopval="450px"
+              marginTopval="250%"
             >
               In 2021 I took my first delve into motion graphics. I chose to
               make an intro for a former youtube channel. I carefully selected
@@ -218,7 +331,7 @@ function App() {
               match said music. This piece may be on the older side but I am
               still very proud of it.
             </Thumbnail>
-            <DottedLine collumname="Video Editing" linelength="1300" />
+            <DottedLine collumname="Video Editing" linelength="120vw" />
           </div>
         </div>
         <div>
@@ -234,7 +347,7 @@ function App() {
               media={sqlite}
               hovertext="Learning efficient methods of using sqlite"
               title="Learning efficient methods of using sqlite"
-              marginTopval="500px"
+              marginTopval="44vw"
             >
               I was tasked with building a custom python bot for my school's
               Esports club. I needed to store teams and the discord users of
@@ -249,7 +362,7 @@ function App() {
               media={sambaimage}
               hovertext="Using Samba to better ingest and organize large video files over a Home Network"
               title="Using Samba to better organize video files over a Home Network"
-              marginTopval="150px"
+              marginTopval="30vw"
             >
               I was struggling to handle management of my many media files for
               my Jellyfin and Video Editing projects, so I turned to Samba for a
@@ -260,7 +373,7 @@ function App() {
               custom SSD boot and HDD storage setup that can store over a
               terabyte of media.
             </Thumbnail>
-            <DottedLine collumname="IT" linelength="750px" />
+            <DottedLine collumname="IT" linelength="100vw" />
           </div>
         </div>
       </div>
