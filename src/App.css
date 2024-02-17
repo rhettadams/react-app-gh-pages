@@ -32,8 +32,8 @@
 #container {
     display: grid; /* turn it into a grid*/
     grid-template-columns: auto auto auto; /* make the columns in the grid split into a 1:2:3 ratio */
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
     grid-gap: 2%;
 }
 
@@ -141,6 +141,8 @@
 .vjs-mouse-display {transform: scale(0.4); font-size: 150% }
 */
 .vjs-time-tooltip {transform: scale(0.4); font-size: 200%;  }
+
+
 
 
 
@@ -333,7 +335,7 @@
 }
 
 .darkmodelightmodetext {
-
+  
 }
 
 @media (prefers-color-scheme: dark) {
@@ -349,3 +351,31 @@
   }
 
 }
+
+.darkmodelightmodetexthover {
+  
+}
+
+@media (prefers-color-scheme: dark) {
+  .darkmodelightmodetexthover{
+    color: #ffffff;
+    text-shadow: -0.5px -0.5px 0 #353535, 0.5px -0.5px 0 #353535, -0.5px 0.5px 0 #353535, 0.5px 0.5px 0 #353535;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .darkmodelightmodetexthover{
+    
+    color: #313131;
+    text-shadow: -0.5px -0.5px 0 #353535, 0.5px -0.5px 0 #353535, -0.5px 0.5px 0 #353535, 0.5px 0.5px 0 #353535;
+  }
+
+}
+
+
+
+.child {
+  font-size: 1.9vw;
+  vertical-align: middle;
+}
+
